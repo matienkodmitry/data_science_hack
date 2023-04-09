@@ -12,7 +12,7 @@ import torch.nn.functional as F
 from IPython.display import clear_output
 
 
-class BertClassifierCategory:
+class BertClassifierSemantic:
 
     def __init__(self, model_path, tokenizer_path, n_classes=2, epochs=1, model_save_path='/content/bert.pt'):
         self.model = BertForSequenceClassification.from_pretrained(model_path)
