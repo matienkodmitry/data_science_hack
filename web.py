@@ -36,7 +36,7 @@ def load_model_rubert_semantic():
         with st.spinner("Загружаем модель... Это может занять время! \n Не останавливайте это!"):
             url = 'https://drive.google.com/file/d/1Kw5rKEFCIQBZFeObpybTpmUfYN657mz-/view?usp=share_link'
             gdown.download_folder(url, quiet=True, use_cookies=False)
-            model = model = torch.load('rubert_semantic/bert.pth', map_location=torch.device('cpu'))
+            model = torch.load('rubert_semantic/bert.pth', map_location=torch.device('cpu'))
 
     bert_model = BertClassifierSemantic(model_path='cointegrated/rubert-tiny',
                                         tokenizer_path='cointegrated/rubert-tiny',
@@ -68,4 +68,4 @@ result = st.button('Предсказать категорию')
 
 if sentence and result:
     st.write(f'Категория отзыва: {label2cat[str(bert_category.predict(sentence))]}')
-    st.write(f'Категория отзыва: {label2sent[str(bert_category.predict(sentence))]}')
+    st.write(f'Этичность банка по отзыву: {label2sent[str(bert_category.predict(sentence))]}')
