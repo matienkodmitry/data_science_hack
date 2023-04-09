@@ -11,7 +11,7 @@ regex==2021.11.10
 ipython==7.19.0
 tqdm==4.65.0
 subword-nmt==0.3.8
-transformers==4.14.0
+transformers
 ipython==7.19.0
 jsondiff==1.1.2
 jsonpatch==1.32
