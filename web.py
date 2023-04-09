@@ -59,6 +59,8 @@ def read_label2sent():
 
 bert_category = load_model_rubert_category()
 bert_semantic = load_model_rubert_semantic()
+bert_category.model.eval()
+bert_semantic.model.eval()
 label2cat = read_label2cat()
 label2sent = read_label2sent()
 
@@ -67,5 +69,6 @@ sentence = st.text_input('Напишите отзыв:')
 result = st.button('Предсказать категорию')
 
 if sentence and result:
-    st.write(f'Категория отзыва: {label2cat[str(bert_category.predict(sentence))]}')
-    st.write(f'Этичность банка по отзыву: {label2sent[str(bert_category.predict(sentence))]}')
+    with torch.no_grad():
+        st.write(f'Категория отзыва: {label2cat[str(bert_category.predict(sentence))]}')
+        st.write(f'Этичность банка по отзыву: {label2sent[str(bert_category.predict(sentence))]}')
