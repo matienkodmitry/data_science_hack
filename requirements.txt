@@ -18,3 +18,4 @@ jsonpatch==1.32
 jsonpath-ng==1.5.3
 jsonpointer==2.2
 jsonschema==4.17.3
+Cython==0.28.5
