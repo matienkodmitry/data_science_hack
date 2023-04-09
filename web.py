@@ -57,15 +57,12 @@ def read_label2sent():
     return label2sent
 
 
-
 bert_category = load_model_rubert_category()
 bert_semantic = load_model_rubert_semantic()
 label2cat = read_label2cat()
 label2sent = read_label2sent()
 
-# Выводим заголовок страницы средствами Streamlit
 st.title('Определение категории по отзыву')
-# Вызываем функцию создания формы загрузки изображения
 sentence = st.text_input('Напишите отзыв:')
 result = st.button('Предсказать категорию')
 
