@@ -19,6 +19,6 @@ jsonpath-ng==1.5.3
 jsonpointer==2.2
 jsonschema==4.17.3
 streamlit==1.16.0
-gdown==4.6.t
+gdown==4.6.0
 
 
