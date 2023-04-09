@@ -20,4 +20,3 @@ jsonpointer==2.2
 jsonschema==4.17.3
 Cython==0.28.5
 streamlit==1.21.0
-pip install pip==23.0.1
